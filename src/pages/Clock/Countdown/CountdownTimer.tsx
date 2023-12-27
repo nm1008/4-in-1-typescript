@@ -1,4 +1,4 @@
-import Button from "../../../components/Button/Button";
+import Button from "../../../components/Button";
 import { useEffect, useState } from "react";
 import CountdownExpired from "./CountdownExpired";
 

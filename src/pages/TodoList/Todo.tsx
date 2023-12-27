@@ -1,7 +1,7 @@
 import { useState } from "react";
 
-import Button from "../../components/Button/Button";
-import TodoTask from "../../components/TodoTask/TodoTask";
+import Button from "../../components/Button";
+import TodoTask from "../../components/TodoTask";
 
 const Todo = () => {
   const [userInput, setUserInput] = useState<string>("");

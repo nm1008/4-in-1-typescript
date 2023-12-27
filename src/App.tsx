@@ -1,6 +1,6 @@
 import { Routes, Route } from "react-router";
 
-import Nav from "./components/Navbar/Nav";
+import Nav from "./components/nav";
 import Calculator from "./pages/Calculator/Calculator";
 import Todo from "./pages/TodoList/Todo";
 import ClockPage from "./pages/Clock/ClockPage";

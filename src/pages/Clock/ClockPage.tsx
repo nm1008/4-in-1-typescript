@@ -1,5 +1,6 @@
 import Clock from "./Clock";
 import CountdownTimer from "./Countdown/CountdownTimer";
+import Stopwatch from "./Stopwatch/Stopwatch";
 
 const ClockPage = () => {
   return (
@@ -19,7 +20,7 @@ const ClockPage = () => {
           </div>
           <div className="w-full flex items-center justify-center flex-col md:w-1/2 mx-5">
             <h1 className="text-center text-3xl font-bold mb-5">Stopwatch</h1>
-            {/* <Stopwatch /> */}
+            <Stopwatch />
           </div>
         </div>
       </div>
