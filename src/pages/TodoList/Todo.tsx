@@ -57,7 +57,7 @@ const Todo = () => {
   };
 
   return (
-    <section className="h-screen bg-gradient-to-b from-cyan-500 to-blue-500">
+    <section className="h-screen bg-gradient-to-b from-white to-blue-500">
       <div className="container mx-auto py-12">
         <div className=" flex flex-col items-center justify-center px-6 pt-5 lg:py-0 md:pt-12">
           <h1 className="text-black flex items-center mb-6 text-3xl font-bold tracking-wide">

@@ -16,15 +16,15 @@ const Nav = () => {
     setOpen((status) => !status);
   };
   return (
-    <nav className="bg-gray-800">
+    <nav className="bg-white">
       <div className=" px-4 sm:px-6 lg:px-8 ">
         <div className="flex items-center justify-between h-16">
           <div className="flex items-center gap-2 ">
-            <a href="#" className="text-md font-medium px-3 py-2 text-white">
+            <a href="#" className="text-md font-medium px-3 py-2 text-black">
               4-in-1
             </a>
           </div>
-          <div className="hidden md:block text-white">
+          <div className="hidden md:block text-black">
             <div className="flex items-baseline space-x-4 ">
               <ul className="flex gap-2">
                 <li className={navlinkStyle}>

@@ -3,10 +3,10 @@ import Button from "../../../components/Button";
 
 const Stopwatch = () => {
   const [time, setTime] = useState<number | any>(0);
-  const [timer, setTimer] = useState<boolean | any>(false);
+  const [timer, setTimer] = useState<number | null>(null);
 
   useEffect(() => {
-    if (timer) {
+    if (timer !== null) {
       const intervalId = setInterval(() => {
         setTime((prevTime: number) => prevTime + 10);
       }, 10);
@@ -15,16 +15,16 @@ const Stopwatch = () => {
   }, [timer]);
 
   const handleStartStopwatch = () => {
-    setTimer(true);
+    setTimer(timer === null ? Date.now() : timer);
   };
 
   const handlePauseStopwatch = () => {
-    setTimer(false);
+    setTimer(null);
   };
 
   const handleResetStopwatch = () => {
     setTime(0);
-    setTimer(false);
+    setTimer(null);
   };
 
   const formatTime = (milliseconds: number) => {

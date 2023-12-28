@@ -3,7 +3,7 @@ import { useEffect, useState } from "react";
 import CountdownExpired from "./CountdownExpired";
 
 const CountdownTimer = () => {
-  const [countDownSeconds, setCountDownSeconds] = useState<number | any>(10);
+  const [countDownSeconds, setCountDownSeconds] = useState<number>(10);
   const [timer, setTimer] = useState<boolean>(false);
 
   useEffect(() => {
