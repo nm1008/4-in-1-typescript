@@ -73,7 +73,7 @@ const Weather = () => {
           <div className="w-full flex items-center justify-center flex-col md:w-1/2 mx-5">
             <h1 className="text-center text-3xl font-bold mb-5">Weather</h1>
 
-            <WeatherInfo />
+            <WeatherInfo data={selectedCountry} loading={loading} />
           </div>
           <div className="w-full flex items-center justify-center flex-col md:w-1/2 mx-5">
             <h1 className="text-center text-3xl font-bold mb-5">Details</h1>
