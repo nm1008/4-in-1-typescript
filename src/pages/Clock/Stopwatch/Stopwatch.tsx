@@ -12,7 +12,7 @@ const Stopwatch = () => {
           if (prevTime !== null) {
             return prevTime + 10;
           } else {
-            return null; // Handle the null case
+            return null; 
           }
         });
       }, 10);
@@ -50,7 +50,7 @@ const Stopwatch = () => {
       .toString()
       .padStart(2, "0")}.${millisecondsPart.toString().padStart(3, "0")}`;
   };
-  
+
   return (
     <div className="w-full bg-white rounded-lg shadow dark:border md:mt-0 sm:max-w-lg xl:p-0">
       <div className=" space-y-4 h md:space-y-6 sm:p-8">
