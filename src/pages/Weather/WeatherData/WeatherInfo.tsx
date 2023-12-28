@@ -8,7 +8,7 @@ const WeatherInfo: React.FC<WeatherInfoProps> = ({ data, loading }) => {
   const [weatherForecast, setWeatherForecast] = useState<string>("");
 
   useEffect(() => {
-    data?.weather?.map((w) => {
+    data?.weather?.map((w: { icon: string; description: string }) => {
       setWeatherPicture(w.icon);
       setWeatherForecast(w.description);
     });
@@ -32,7 +32,7 @@ const WeatherInfo: React.FC<WeatherInfoProps> = ({ data, loading }) => {
               <h1 className="text-3xl font-bold mt-5">{data?.name}</h1>
               <div className="flex gap-10 items-center ">
                 <h1 className="text-5xl font-semibold md:text-6xl lg:text-7xl">{`${Math.floor(
-                  data?.main?.temp
+                  data?.main?.temp ?? 0
                 )}°`}</h1>
                 <img
                   src={`https://openweathermap.org/img/wn/${weatherPicture}.png`}

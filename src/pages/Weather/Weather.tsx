@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 
 import axios from "axios";
-import WeatherData from "./interface";
+import { WeatherData } from "./interface";
 
 import Button from "../../components/Button";
 import WeatherInfo from "./WeatherData/WeatherInfo";
@@ -9,7 +9,9 @@ import WeatherDetails from "./WeatherData/WeatherDetails";
 
 const Weather = () => {
   const [country, setCountry] = useState<string>("Manila");
-  const [selectedCountry, setSelectedCountry] = useState<WeatherData>([]);
+  const [selectedCountry, setSelectedCountry] = useState<WeatherData | null>(
+    null
+  );
   const [loading, setLoading] = useState<boolean>(false);
 
   useEffect(() => {
@@ -52,7 +54,7 @@ const Weather = () => {
   };
 
   return (
-    <section className="h-full bg-gradient-to-b from-white to-blue-500 md:h-screen">
+    <section className="h-screen bg-gradient-to-b from-white to-blue-500">
       <div className="container mx-auto py-5 flex items-center flex-col">
         <h1 className="font-bold mb-5 py-5 text-center text-md md:text-3xl">
           React Weather App

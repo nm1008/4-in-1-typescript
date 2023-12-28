@@ -63,7 +63,7 @@ const Nav = () => {
           <div className="md:hidden">
             <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3">
               <ul className="flex flex-col items-center">
-                <div className="text-white flex flex-col gap-3">
+                <div className="text-black flex flex-col gap-3">
                   <li className={navlinkStyle}>
                     <FaCalculator size={24} />
                     <Link to="/">Calculator</Link>
