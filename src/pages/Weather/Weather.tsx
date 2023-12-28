@@ -8,8 +8,8 @@ import WeatherInfo from "./WeatherData/WeatherInfo";
 import WeatherDetails from "./WeatherData/WeatherDetails";
 
 const Weather = () => {
-  const [country, setCountry] = useState("Manila");
-  const [selectedCountry, setSelectedCountry] = useState<WeatherData | null>(null);
+  const [country, setCountry] = useState<string>("Manila");
+  const [selectedCountry, setSelectedCountry] = useState<WeatherData>([]);
   const [loading, setLoading] = useState<boolean>(false);
 
   useEffect(() => {
@@ -29,6 +29,7 @@ const Weather = () => {
         console.error("Error fetching weather data:", error);
         setLoading(false);
       });
+    setCountry("");
   }, []);
 
   const handleSearchCountry = async () => {
@@ -47,6 +48,7 @@ const Weather = () => {
         console.error("Error fetching weather data:", error);
         setLoading(false);
       });
+    setCountry("");
   };
 
   return (
@@ -62,6 +64,7 @@ const Weather = () => {
               className="text-center w-full h-14  rounded-3xl font-md border-4 md:w-full md:pl-5 md:text-left lg:w-3/4"
               placeholder="Search city name here.."
               onChange={(e) => setCountry(e.target.value)}
+              value={country}
             />
 
             <Button onClick={handleSearchCountry} color={"bg-blue-600"}>
