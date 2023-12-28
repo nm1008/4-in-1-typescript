@@ -54,7 +54,7 @@ const Weather = () => {
   };
 
   return (
-    <section className="h-screen bg-gradient-to-b from-white to-blue-500">
+    <section className="h-full bg-gradient-to-b from-white to-blue-500 md:h-screen">
       <div className="container mx-auto py-5 flex items-center flex-col">
         <h1 className="font-bold mb-5 py-5 text-center text-md md:text-3xl">
           React Weather App
@@ -82,7 +82,7 @@ const Weather = () => {
           </div>
           <div className="w-full flex items-center justify-center flex-col md:w-1/2 mx-5">
             <h1 className="text-center text-3xl font-bold mb-5">Details</h1>
-            <WeatherDetails />
+            <WeatherDetails data={selectedCountry} loading={loading} />
           </div>
         </div>
       </div>

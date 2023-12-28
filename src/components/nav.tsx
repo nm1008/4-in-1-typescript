@@ -8,7 +8,7 @@ import { TiWeatherPartlySunny } from "react-icons/ti";
 import { FaBars, FaTimes } from "react-icons/fa";
 
 const navlinkStyle =
-  "flex items-center gap-1 transition-all duration-500 hover:bg-gray-600 hover:text-white hover:text-white px-3 py-2 rounded text-md font-medium ";
+  "flex items-center gap-1 transition-all duration-500 hover:bg-gray-600 hover:text-white hover:text-white px-3 py-2 rounded text-sm font-medium md:text-md";
 
 const Nav = () => {
   const [open, setOpen] = useState(false);

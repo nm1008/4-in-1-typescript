@@ -1,6 +1,6 @@
 type Props = {
   title: string;
-  children: string;
+  children: React.ReactNode;
 };
 
 const Card = ({ title, children }: Props) => {

@@ -31,7 +31,7 @@ const WeatherInfo: React.FC<WeatherInfoProps> = ({ data, loading }) => {
             <>
               <h1 className="text-3xl font-bold mt-5">{data?.name}</h1>
               <div className="flex gap-10 items-center ">
-                <h1 className="text-5xl font-semibold md:text-6xl lg:text-7xl">{`${Math.floor(
+                <h1 className="text-5xl font-semibold md:text-5xl lg:text-6xl">{`${Math.floor(
                   data?.main?.temp ?? 0
                 )}°`}</h1>
                 <img

@@ -45,9 +45,9 @@ const CountdownTimer = () => {
   };
 
   return (
-    <div className="w-full bg-white rounded-lg shadow dark:border md:mt-0 sm:max-w-lg xl:p-0">
+    <div className="w-full bg-white rounded-lg shadow">
       <div className=" space-y-4 md:space-y-6 ">
-        <div className="flex gap-10 justify-center flex-col items-center px-3 py-5 ">
+        <div className="flex gap-10 justify-center flex-col items-center py-5 ">
           {countDownSeconds !== 0 ? (
             <>
               <h1 className="text-3xl font-bold md:text-4xl md:pt-2 ">
