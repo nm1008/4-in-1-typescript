@@ -1,8 +1,8 @@
 import { useState } from "react";
 
 const Calculator = () => {
-  const [input, setInput] = useState("0");
-  const [result, setResult] = useState("");
+  const [input, setInput] = useState<string>("0");
+  const [result, setResult] = useState<string>("");
 
   const numberBtn =
     "bg-gray-700 text-white mx-2 my-3 w-auto rounded-3xl px-1 py-2 text-md font-bold md:text-lg hover:bg-white hover:text-black  transition duration-200";
