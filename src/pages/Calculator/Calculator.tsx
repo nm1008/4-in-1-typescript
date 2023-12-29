@@ -4,6 +4,41 @@ const Calculator = () => {
   const [input, setInput] = useState<string>("0");
   const [result, setResult] = useState<string>("");
 
+  const handleButtonClick = (value: string) => {
+    if (input === "0" && value !== ".") {
+      setInput(value);
+    } else if (value === "." && input.includes(".")) {
+      return;
+    } else {
+      setInput((prevInput) => prevInput + value);
+    }
+  };
+
+  const handleClear = () => {
+    setInput("0");
+    setResult("");
+  };
+
+  const handleCalculate = () => {
+    try {
+      setResult(eval(input).toString());
+    } catch (error) {
+      setResult("Error");
+    }
+  };
+
+  const handleDelete = () => {
+    if (result !== "") {
+      setInput("0");
+      setResult("");
+    } else {
+      setInput((prevInput) => {
+        const newInput = prevInput.slice(0, -1);
+        return newInput === "" ? "0" : newInput;
+      });
+    }
+  };
+
   const numberBtn =
     "bg-gray-700 text-white mx-2 my-3 w-auto rounded-3xl px-1 py-2 text-md font-bold md:text-lg hover:bg-white hover:text-black  transition duration-200";
 
@@ -23,26 +58,107 @@ const Calculator = () => {
             <h1 className="grow text-end font-bold text-xl ">{result}</h1>
           </div>
           <div className="grid grid-cols-4 text-white">
-            <button className={numberBtn}>7</button>
-            <button className={numberBtn}>8</button>
-            <button className={numberBtn}>9</button>
-            <button className={funcButton}>Del</button>
-            <button className={numberBtn}>4</button>
-            <button className={numberBtn}>5</button>
-            <button className={numberBtn}>6</button>
-            <button className={operatorBtn}>+</button>
-            <button className={numberBtn}>1</button>
-            <button className={numberBtn}>2</button>
-            <button className={numberBtn}>3</button>
-            <button className={operatorBtn}>-</button>
-            <button className={numberBtn}>.</button>
-            <button className={numberBtn}>0</button>
-            <button className={operatorBtn}>/</button>
-            <button className={operatorBtn}>X</button>
+            <button
+              className={numberBtn}
+              onClick={() => handleButtonClick("7")}
+            >
+              7
+            </button>
+            <button
+              className={numberBtn}
+              onClick={() => handleButtonClick("8")}
+            >
+              8
+            </button>
+            <button
+              className={numberBtn}
+              onClick={() => handleButtonClick("9")}
+            >
+              9
+            </button>
+            <button className={funcButton} onClick={handleDelete}>
+              Del
+            </button>
+            <button
+              className={numberBtn}
+              onClick={() => handleButtonClick("4")}
+            >
+              4
+            </button>
+            <button
+              className={numberBtn}
+              onClick={() => handleButtonClick("5")}
+            >
+              5
+            </button>
+            <button
+              className={numberBtn}
+              onClick={() => handleButtonClick("6")}
+            >
+              6
+            </button>
+            <button
+              className={operatorBtn}
+              onClick={() => handleButtonClick("+")}
+            >
+              +
+            </button>
+            <button
+              className={numberBtn}
+              onClick={() => handleButtonClick("1")}
+            >
+              1
+            </button>
+            <button
+              className={numberBtn}
+              onClick={() => handleButtonClick("2")}
+            >
+              2
+            </button>
+            <button
+              className={numberBtn}
+              onClick={() => handleButtonClick("3")}
+            >
+              3
+            </button>
+            <button
+              className={operatorBtn}
+              onClick={() => handleButtonClick("-")}
+            >
+              -
+            </button>
+            <button
+              className={numberBtn}
+              onClick={() => handleButtonClick(".")}
+            >
+              .
+            </button>
+            <button
+              className={numberBtn}
+              onClick={() => handleButtonClick("0")}
+            >
+              0
+            </button>
+            <button
+              className={operatorBtn}
+              onClick={() => handleButtonClick("/")}
+            >
+              /
+            </button>
+            <button
+              className={operatorBtn}
+              onClick={() => handleButtonClick("*")}
+            >
+              X
+            </button>
           </div>
           <div className="flex text-white">
-            <button className={`grow ${funcButton}`}>Reset</button>
-            <button className={`grow ${operatorBtn}`}>=</button>
+            <button className={`grow ${funcButton}`} onClick={handleClear}>
+              Reset
+            </button>
+            <button className={`grow ${operatorBtn}`} onClick={handleCalculate}>
+              =
+            </button>
           </div>
         </div>
       </div>
