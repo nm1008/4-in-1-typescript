@@ -8,10 +8,12 @@ const WeatherInfo: React.FC<WeatherInfoProps> = ({ data, loading }) => {
   const [weatherForecast, setWeatherForecast] = useState<string>("");
 
   useEffect(() => {
-    data?.weather?.map((w: { icon: string; description: string }) => {
-      setWeatherPicture(w.icon);
-      setWeatherForecast(w.description);
-    });
+    if (data?.weather && Array.isArray(data.weather)) {
+      data.weather.forEach((w: { icon: string; description: string }) => {
+        setWeatherPicture(w.icon);
+        setWeatherForecast(w.description);
+      });
+    }
   }, [data?.weather]);
 
   return (
