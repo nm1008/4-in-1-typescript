@@ -31,8 +31,8 @@ const Todo = () => {
     );
 
     if (confirm) {
-      const filtered = todoList.filter((task, i) => {
-        return index !== i;
+      const filtered = todoList.filter((_task, i) => {
+        return editIndex !== i;
       });
       setTodoList(filtered);
       setEditIndex(null);
