@@ -1,30 +1,38 @@
-# React + TypeScript + Vite
+# 4-in-1 Web App
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Welcome to 4-in-1, a versatile web application crafted in TypeScript that combines four essential tools in one seamless package.
 
-Currently, two official plugins are available:
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
 
-## Expanding the ESLint configuration
+## Features
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+- Calculator:
+Perform quick calculations with our user-friendly calculator. Whether you're crunching numbers for work or school, the built-in calculator has you covered.
 
-- Configure the top-level `parserOptions` property like this:
+- Todo List:
+Stay organized and boost productivity with the integrated todo list. Manage your tasks efficiently, set priorities, and track your progress effortlessly.
 
-```js
-export default {
-  // other rules...
-  parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-  },
-}
-```
+- Clock with Countdown Timer:
+Keep track of time with the interactive clock, and set countdown timers for your important events. Never miss a deadline or appointment again.
 
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+- Stopwatch:
+Need precise timing for a task or activity? Use the stopwatch feature to measure elapsed time accurately.
+
+- Weather App:
+Stay informed about the weather conditions in your area. The included weather app provides real-time updates, ensuring you're prepared for any changes.
+
+
+## Screenshots
+
+![Calculator](https://i.postimg.cc/4mCxSsH4/calc.png)
+
+![Todo App](https://i.postimg.cc/Wd8pzZWt/Todo.png)
+
+![Clock - Countdown Timer - Stopwatch](https://i.postimg.cc/crQLq2fR/Clock.png)
+
+![Weather App](https://i.postimg.cc/jDtdRchG/weather.png)
+## Tech Stack
+
+**Client:** React, Typescript, TailwindCSS
+
+

@@ -20,7 +20,7 @@ const Nav = () => {
       <div className=" px-4 sm:px-6 lg:px-8 ">
         <div className="flex items-center justify-between h-16">
           <div className="flex items-center gap-2 ">
-            <a href="#" className="text-md font-medium px-3 py-2 text-black">
+            <a href="/" className="text-md font-medium px-3 py-2 text-black">
               4-in-1
             </a>
           </div>
