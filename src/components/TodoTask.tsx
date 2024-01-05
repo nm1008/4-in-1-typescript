@@ -1,14 +1,13 @@
-type Props = {
-    task: string;
-    number: number;
-    handleDeleteTask: () => void;
-    handleEditTask: () => void; // Corrected the typo in the function name
-    editIndex: number | null;
-  };
-  
+import { FaEdit } from "react-icons/fa";
+import { FaTimes } from "react-icons/fa";
 
-const todoButton =
-  "px-4g py-3 text-sm  mt-0  text-white rounded-lg md:px-3 md:text-md";
+type Props = {
+  task: string;
+  number: number;
+  handleDeleteTask: () => void;
+  handleEditTask: () => void;
+  editIndex: number | null;
+};
 
 const TodoTask = ({
   task,
@@ -17,27 +16,30 @@ const TodoTask = ({
   handleEditTask,
   editIndex,
 }: Props) => {
-
   return (
-    <div className="flex flex-col gap-3 justify-between items-center py-3  md:flex-row ">
-      <h1 className="font-bold md:ml-5">
-        {number + 1}. {task}
-      </h1>
-      <div className="flex gap-2 w-fullmd:mr-5">
+    <div className="flex flex-col items-center pt-3 md:flex-row md:justify-between border-b-2 pb-2 ">
+      <div className="">
+        <h1 className="font-bold md:ml-5">
+          {number + 1}. {task}
+        </h1>
+      </div>
+      <div className="flex gap-5 md:mr-5">
         {editIndex === null && (
-          <button
+          <FaEdit
             onClick={handleEditTask}
-            className={`bg-amber-600 ${todoButton}`}
+            style={{ color: "white" }}
+            className="w-6 h-10 cursor"
           >
             Edit
-          </button>
+          </FaEdit>
         )}
-        <button
+        <FaTimes
           onClick={handleDeleteTask}
-          className={`bg-red-600 mr-0 md:mr-5 ${todoButton}`}
+          style={{ color: "white" }}
+          className="w-5 h-10 cursor"
         >
-          Delete
-        </button>
+          &times
+        </FaTimes>
       </div>
     </div>
   );

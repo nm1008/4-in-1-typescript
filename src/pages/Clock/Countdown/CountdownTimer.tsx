@@ -7,7 +7,6 @@ const CountdownTimer = () => {
   const [timer, setTimer] = useState<boolean>(false);
 
   useEffect(() => {
-
     const handleCountDown = () => {
       if (timer) {
         if (countDownSeconds > 0) {
@@ -28,7 +27,7 @@ const CountdownTimer = () => {
   }, [countDownSeconds, timer]);
 
   const handleStartTimer = () => {
-    setTimer(true); 
+    setTimer(true);
   };
 
   const handleStopTimer = () => {
@@ -45,7 +44,7 @@ const CountdownTimer = () => {
   };
 
   return (
-    <div className="w-full bg-white rounded-lg shadow">
+    <div className="w-full bg-white rounded-lg shadow md:mt-0 sm:max-w-lg xl:p-0 bg-gradient-to-b from-white to-blue-500">
       <div className=" space-y-4 md:space-y-6 ">
         <div className="flex gap-10 justify-center flex-col items-center py-5 ">
           {countDownSeconds !== 0 ? (
@@ -55,7 +54,7 @@ const CountdownTimer = () => {
                   ? `${countDownSeconds} second`
                   : `${countDownSeconds} seconds`}
               </h1>
-            
+
               <div className="flex gap-3">
                 <Button color={"bg-blue-600"} onClick={handleStartTimer}>
                   Start

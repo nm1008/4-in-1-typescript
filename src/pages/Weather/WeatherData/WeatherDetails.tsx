@@ -34,7 +34,7 @@ const WeatherDetails: React.FC<WeatherInfoProps> = ({ data, loading }) => {
   }, [timeAm, timePm]);
 
   return (
-    <div className="w-full p-5 bg-white rounded-lg shadow md:w-full lg:w-5/6">
+    <div className="w-full p-5 bg-white rounded-lg shadow md:w-full lg:w-5/6 bg-gradient-to-b from-white to-blue-500">
       <div className=" space-y-4 h md:space-y-6  ">
         <div className="flex flex-col">
           <div className="flex gap-5 mb-5 text-center p-2 ">

@@ -63,11 +63,11 @@ const Todo = () => {
           <h1 className="text-black flex items-center mb-6 text-3xl font-bold tracking-wide">
             Simple Todo App
           </h1>
-          <div className="w-full px-3 pb-5 bg-gray-50 rounded-lg shadow-xl dark:border md:mt-0 md:p-5 sm:max-w-lg xl:p-0">
-            <div className=" py-0 flex items-center justify-center flex-col space-y-4 md:py-5">
+          <div className="w-full px-3 pb-5 bg-gray-50 rounded-lg shadow-xl md:mt-0 md:p-5 sm:max-w-lg xl:p-0  bg-gradient-to-b from-white to-blue-500">
+            <div className=" py-0 px-5 flex items-center justify-center flex-col space-y-4 md:py-5">
               <input
                 type="text"
-                className=" w-3/4 h-12 pl-5 rounded-md font-md border-4 mt-5"
+                className=" w-full h-12 pl-5 rounded-md font-md border-4 mt-5 "
                 placeholder="Enter a task..."
                 onChange={(e) => setUserInput(e.target.value)}
                 value={userInput}
@@ -88,7 +88,7 @@ const Todo = () => {
               <div
                 className={`${
                   todoList.length > 0
-                    ? "border-2 shadow-md w-full md:w-3/4 py-2 "
+                    ? "w-full md:w-3/4 pt-2 flex flex-col "
                     : ""
                 }`}
               >
