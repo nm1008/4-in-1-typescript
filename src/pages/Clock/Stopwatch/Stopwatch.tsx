@@ -47,7 +47,7 @@ const Stopwatch = () => {
   };
 
   return (
-    <div className="w-full bg-white rounded-lg shadow dark:border md:mt-0 sm:max-w-lg xl:p-0">
+    <div className="w-full bg-white rounded-lg shadow md:mt-0 sm:max-w-lg xl:p-0 bg-gradient-to-b from-white to-blue-500">
       <div className=" space-y-4 h md:space-y-6 sm:p-8">
         <div className="flex gap-10 h-52 justify-center flex-col items-center md:h-58 ">
           <h1 className="text-4xl font-bold">{formatTime(time)}</h1>
