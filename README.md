@@ -25,13 +25,13 @@ Welcome to 4-in-1, a versatile web application crafted in TypeScript that combin
 
 ## Screenshots
 
-![Calculator](https://i.postimg.cc/4mCxSsH4/calc.png)
+![Calculator](https://github.com/nm1008/repo-pics/blob/main/calc.PNG?raw=true)
 
-![Todo App](https://i.postimg.cc/Wd8pzZWt/Todo.png)
+![Todo App](https://github.com/nm1008/repo-pics/blob/main/Todo.PNG?raw=true)
 
-![Clock - Countdown Timer - Stopwatch](https://i.postimg.cc/crQLq2fR/Clock.png)
+![Clock - Countdown Timer - Stopwatch](https://github.com/nm1008/repo-pics/blob/main/Clock.PNG?raw=true)
 
-![Weather App](https://i.postimg.cc/jDtdRchG/weather.png)
+![Weather App](https://github.com/nm1008/repo-pics/blob/main/weather.PNG?raw=true)
 
 ## Tech Stack
 
